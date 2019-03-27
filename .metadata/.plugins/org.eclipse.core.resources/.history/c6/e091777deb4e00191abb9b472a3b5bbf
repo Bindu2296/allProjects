@@ -1,0 +1,38 @@
+package com.servlets.forms;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class FormsServlets extends HttpServlet{
+public void init() {
+		
+		System.out.println("Forms Servlet initialized");
+	}
+	
+public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException
+{
+	String fname=request.getParameter("firstname");
+	String lname=request.getParameter("lastname");
+
+	PrintWriter out=response.getWriter();
+	out.println("<!DOCTYPE html>");
+	out.println("<html><body>");
+	out.println("<p>Hey there</p></body>");
+	out.println("<p>First Name is: "+firstname+"</p>");
+	out.println("<p>Last Name is: "+lastname+"</p></body>");
+	out.println("</html>");
+}
+
+
+
+public void destroy() {
+	
+	System.out.println("Forms Servlet destroyed");
+
+}
+
+}

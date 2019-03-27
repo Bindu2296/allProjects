@@ -1,0 +1,14 @@
+import javax.servlet.ServletRequest;
+
+public class Authfilter implements Filter {
+	 public void dofilter(ServletRequest request,ServletResponse response,FilterChain chain)throws IOexception,ServletException{
+		 
+String username =(String) request.getParameter("username");
+if(username != null)
+{
+	
+}
+		 
+	 }
+		
+}

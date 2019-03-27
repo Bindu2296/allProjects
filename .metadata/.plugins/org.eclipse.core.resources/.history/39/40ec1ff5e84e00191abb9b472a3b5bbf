@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="">
+<label>Enter first name</label><input name="firstname" type="text"/>
+<label>Enter last name</label><input name="lastname" type="text"/>
+<input type="submit"/>
+<input type="reset"/>
+
+
+</form>
+</body>
+</html>

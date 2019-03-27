@@ -1,0 +1,29 @@
+package com.servlets.forms;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class FormsServlets extends HttpServlet{
+public void init() {
+		
+		System.out.println("Forms Servlet initialized");
+	}
+	
+public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException
+{
+	
+	
+}
+
+
+
+public void destroy() {
+	
+	System.out.println("Forms Servlet destroyed");
+
+}
+
+}

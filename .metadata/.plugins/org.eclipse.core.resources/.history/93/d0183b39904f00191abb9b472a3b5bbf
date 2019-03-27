@@ -1,0 +1,16 @@
+package com.servlets.maven;
+
+import java.time.LocalDate;
+
+import javax.servlet.ServletRequest;
+
+public class LoggingFilters implements Filter {
+ public void dofilter(ServletRequest request,ServletResponse response,FilterChain chain)throws IOexception,ServletException{
+	 
+	 String host =(String) request.getRemoteHost();
+	 System.out.println("request Received host: "+host+"at "+LocalDate.now());
+	 
+ }
+	
+	
+}

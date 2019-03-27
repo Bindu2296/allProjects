@@ -1,0 +1,21 @@
+package com.servlets.forms;
+
+import javax.servlet.http.HttpServlet;
+
+public class FormsServlets extends HttpServlet{
+public void init() {
+		
+		System.out.println("Forms Servlets initialized");
+	}
+	
+
+
+
+
+public void destroy() {
+	
+	System.out.println("Forms Servlets destroyed");
+
+}
+
+}
