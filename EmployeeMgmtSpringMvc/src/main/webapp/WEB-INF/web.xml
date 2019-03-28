@@ -27,4 +27,33 @@
   <url-pattern>/login.do</url-pattern>
   
   </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>AddServlet</servlet-name>
+  <servlet-class>com.spring.mvc.AddServlet</servlet-class>
+  
+  
+    </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>AddServlet</servlet-name>
+  <url-pattern>/add.do</url-pattern>
+  
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>ViewAllServlet</servlet-name>
+  <servlet-class>com.spring.mvc.ViewAllServlet</servlet-class>
+  
+  
+    </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ViewAllServlet</servlet-name>
+  <url-pattern>/viewall.do</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
 </web-app>

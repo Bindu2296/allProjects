@@ -41,6 +41,7 @@ package com.spring.mvc;
 			HttpSession session = request.getSession();
 			
 			
+			int id = request.getParameter("id");
 
 			String ename = request.getParameter("eName");
 			String designation = request.getParameter("designation");
@@ -60,7 +61,7 @@ package com.spring.mvc;
 				return age;
 			}
 			
-			Employees emp=new Employees(eName,id,age,designation,dept,sal);
+			Employees emp=new Employees(ename,id,age,designation,dept,sal);
 			try {
 				employeeService.addEmployee(emp);
 			} catch (SQLException e) {

@@ -12,6 +12,8 @@ pageEncoding="ISO-8859-1"%>
 
 <form action="add.do" method="POST">
 
+<input type="number" name="id" placeholder="Enter Id" />
+
 <input type="text" name="eName"
 placeholder="Enter Name" />
 
