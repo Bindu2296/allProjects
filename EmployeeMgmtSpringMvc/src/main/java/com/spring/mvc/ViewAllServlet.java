@@ -42,15 +42,15 @@ package com.spring.mvc;
 			
 			HttpSession session = request.getSession();
 			try {
-			List list=employeeService.viewEmployees();
-			request.setAttribute("employeeDetails",list);
+			List<Employees> elist=employeeService.viewEmployees();
+			request.setAttribute("employeeDetails",elist);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
 			
-			response.sendRedirect("view.jsp");
+			response.sendRedirect("viewall.jsp");
 			
 
 			

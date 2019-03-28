@@ -2,26 +2,27 @@ package com.spring.mvc;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 public class EmpService {
 E dao =new E(0, null, null, null, 0, 0) ;
 	
 
-	public  void addEmployee( ) throws SQLException {
+	public  void addEmployee(Employees emp ) throws SQLException {
 		// TODO Auto-generated method stub
-		 dao.addEmployee(Employees emp);
+		 dao.addEmployee(emp);
 	}
 
 	public  void updateEmployee() throws SQLException {
 		// TODO Auto-generated method stub
-		 dao.updateEmployee();
+		// dao.updateEmployee();
 	}
 
 	@SuppressWarnings("unchecked")
 
-	public void viewEmployees() throws SQLException {
+	public List<Employees> viewEmployees() throws SQLException {
 		// TODO Auto-generated method stub
-		 dao.viewEmployees();
+		return dao.viewEmployees();
 	}
 
 

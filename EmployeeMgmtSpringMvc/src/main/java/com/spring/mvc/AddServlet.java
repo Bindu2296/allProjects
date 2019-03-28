@@ -41,7 +41,7 @@ package com.spring.mvc;
 			HttpSession session = request.getSession();
 			
 			
-			int id = request.getParameter("id");
+			int id = Integer.parseInt( request.getParameter("id"));
 
 			String ename = request.getParameter("eName");
 			String designation = request.getParameter("designation");
@@ -52,14 +52,7 @@ package com.spring.mvc;
 			String date=request.getParameter("dob");
 			int age =calculateAge(date);
 
-			private int calculateAge(String dob) {
-				// TODO Auto-generated method stub
-		        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-		        LocalDate bday=LocalDate.parse(dob, formatter);
-				Period p=Period.between(bday, LocalDate.now());
-				int age=p.getYears();
-				return age;
-			}
+			
 			
 			Employees emp=new Employees(ename,id,age,designation,dept,sal);
 			try {
@@ -74,7 +67,16 @@ package com.spring.mvc;
 			
 
 		}
+		
+		private int calculateAge(String dob) {
+			// TODO Auto-generated method stub
+	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+	        LocalDate bday=LocalDate.parse(dob, formatter);
+			Period p=Period.between(bday, LocalDate.now());
+			int age=p.getYears();
+			return age;
+		}
 
 	}
 
-}
+

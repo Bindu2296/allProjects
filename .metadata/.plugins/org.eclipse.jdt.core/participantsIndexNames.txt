@@ -3,6 +3,8 @@ D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4211427231.index
 \EmployeeMgmtSpringMvc\src\main\resources
 D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1505634355.index
 \SpringMvc\src\main\java
+D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2660013964.index
+\SpringMVCGreetingsEx\src\main\java
 D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4024136909.index
 \Jspforms\src\main\resources
 D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1031544797.index
@@ -13,6 +15,8 @@ D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4171781394.index
 \EmployeeMgmtSpringMvc\src\main\java
 D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3059563135.index
 \HelloWorldJsp\src\main\resources
+D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3548189216.index
+\SpringMVCRegistrationEx\src\main\java
 D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\198189969.index
 \Jspforms\src\main\java
 D:\Java1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\6778040.index

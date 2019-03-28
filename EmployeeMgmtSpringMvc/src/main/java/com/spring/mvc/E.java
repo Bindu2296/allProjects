@@ -18,6 +18,7 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -27,19 +28,16 @@ import java.util.stream.Collectors;
 
 
 public class E {
-	//TreeMap<Integer,E> emplist=new TreeMap<Integer,E>();
 	
 	
-	  String JDBC_DRIVER = com.mysql.jdbc.Driver;
-	 String DB_URL = jdbc:mysql://localhost/jdbctraining ;
-
-	
-	 String USER=root ;
- String PASS =pass@word1;
 	 Connection conn=null;
 	 Statement stmt=null;
-	
+	 public  E() {
 		try {
+			String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+			 String DB_URL = "jdbc:mysql://localhost/jdbctraining" ;
+		    String USER="root" ;
+		   String PASS = "pass@word1";
 			Class.forName("com.mysql.jdbc.Driver");
 			conn=DriverManager.getConnection(DB_URL, USER, PASS);
 		} catch (ClassNotFoundException e1) {
@@ -47,15 +45,15 @@ public class E {
 			e1.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+			e.printStackTrace();
+		}}
 		
 		
 	
 	
 
-	public Integer id;
-	 static Scanner sc=new Scanner(System.in);
+	//public Integer id;
+	
 
 	 
 	 public E(int age, String eName, String dept, String designation, int id, double sal)
@@ -93,12 +91,12 @@ public class E {
 		String insertQuery= "insert into EmployeeManagement values(?, ?, ?, ?, ?, ?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(insertQuery);
-			pstmt.setString(1, eName);
-			pstmt.setInt(2, id);
-			pstmt.setInt(3, age);
-			pstmt.setString(4, designation);
-			pstmt.setString(5, dept);
-			pstmt.setDouble(6, sal);
+			pstmt.setString(1, emp.getEmpName());
+			pstmt.setInt(2, emp.getEmpId());
+			pstmt.setInt(3, emp.getAge());
+			pstmt.setString(4, emp.getDesignation());
+			pstmt.setString(5, emp.getDepartment());
+			pstmt.setDouble(6, emp.getSalary());
 			pstmt.execute();
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
@@ -118,7 +116,7 @@ public class E {
 		return age;
 	}
 
-	public void updateEmployee()
+	 /*public void updateEmployee()
 	{
 		System.out.println("Choose an action:");
 		System.out.println("1. Update Employee Name");
@@ -255,7 +253,7 @@ public class E {
 
 		
 
-	}
+	} */
 
 	public void viewEmployeeById(int id)
 
@@ -293,8 +291,9 @@ public class E {
 			e.printStackTrace();
 		}
 	}
-	public void viewEmployees()
+	public List<Employees> viewEmployees()
 	{
+		List<Employees> empslist= new ArrayList<Employees>();
 		String viewQuery="select * from EmployeeManagement";
 		try {
 			Statement stmt=conn.createStatement();
@@ -311,6 +310,8 @@ public class E {
 				String dept=rs.getString("department");
 				double salary=rs.getDouble("salary");
 				System.out.println();
+				Employees e =new Employees(name,eid,age,designation,dept,salary);
+				empslist.add(e);
 				
 			/*	System.out.println("Name: "+ name);
 				System.out.println("Emp Id: "+ eid);
@@ -319,7 +320,7 @@ public class E {
 				System.out.println("department: "+ dept);
 				System.out.println("salary: "+ salary);*/
 
-				System.out.println(eid+"\t"+name+"\t"+age+"\t"+salary+"\t\t"+designation+"\t\t"+dept+"\t");
+			//	System.out.println(eid+"\t"+name+"\t"+age+"\t"+salary+"\t\t"+designation+"\t\t"+dept+"\t");
 				
 
 			}
@@ -327,6 +328,7 @@ public class E {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return empslist;
 	}
 	public void deleteEmployee(int id) {
 		String selectQ="select empid from EmployeeManagement where empId=?";

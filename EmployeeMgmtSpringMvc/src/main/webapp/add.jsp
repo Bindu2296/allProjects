@@ -12,23 +12,23 @@ pageEncoding="ISO-8859-1"%>
 
 <form action="add.do" method="POST">
 
-<input type="number" name="id" placeholder="Enter Id" />
+<label>Enter Id</label><input type="number" name="id" placeholder="Enter Id" />
 
-<input type="text" name="eName"
+<label>Enter Name</label><input type="text" name="eName"
 placeholder="Enter Name" />
 
 
-<input type="date" name="dob" placeholder="select DOB" />
+<label>Enter dob</label><input type="date" name="dob" placeholder="select DOB" />
 
-<input type="text" name="designation" placeholder="Enter Designation" />
+<label>Enter designation</label><input type="text" name="designation" placeholder="Enter Designation" />
 
-<input type="text" name="dept" placeholder="Enter Department" />
+<label>Enter dept</label><input type="text" name="dept" placeholder="Enter Department" />
 
-<input type="number" name="salary" placeholder="Enter salary" />
+<label>Enter salary</label><input type="number" name="salary" placeholder="Enter salary" />
 <br> <input type="submit" value="submit" class="button" />
 <button type="reset" class="button">RESET</button>
 </form><br>
-<a href="success.jsp">HOME</a>
+<a href="index.jsp">HOME</a>
 </div>
 </body>
 </html>
