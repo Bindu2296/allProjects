@@ -2924,3 +2924,9 @@ org.eclipse.swt.SWTError: No more handles
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2019-03-28 11:38:31.633
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-03-28 11:43:31.904
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-03-28 11:43:31.906
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
